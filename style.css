@@ -1,0 +1,248 @@
+
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    user-select: none;   
+}
+
+.main-div {
+    width: 80%;
+    height: 700px; /* This can be adjusted based on your needs */
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #3b82f6;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+header .highlight {
+    color: red;
+}
+
+header p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #64748b;
+}
+
+/* Input Section Styles */
+.input-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #e0f2fe;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+label {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #161a24;
+}
+
+#symptom {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #3b82f6;
+    outline: none;
+    background-color: #f9f9f9;
+    width: 30%; /* Default width */
+}
+#select2{
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #3b82f6;
+    outline: none;
+    background-color: #f9f9f9;
+    width: 30%; /* Default width */
+}
+
+button {
+    background-color: #22c55e;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Output Section Styles */
+.output-section {
+    margin-top: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #1d4ed8;
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+}
+
+#medicine-list {
+    background-color: #f1f5f9;
+    padding: 20px;
+    border-radius: 10px;
+    height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#feedback {
+    padding: 5px 10px;
+    background-color: #16a34a !important;
+    transition: all ease 0.5s;
+}
+
+#feedback:active {
+    scale: 0.9;
+}
+
+.giticon {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Medicine Item Styles */
+.medicine-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e2e8f0;
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.medicine-item h3 {
+    color: #2563eb;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.medicine-item p {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #475569;
+}
+
+.medicine-item span {
+    color: rgb(218, 56, 56);
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mprice {
+    color: #16a34a;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1324px) {
+    .main-div {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+    
+
+    #symptom, #select2 {
+        width: 20%; /* Make input fields wider */
+    }
+
+    header h1 {
+        font-size: 2em; /* Smaller font size */
+    }
+
+    button {
+        padding: 10px 15px; /* Smaller button size */
+    }
+
+    .medicine-item {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .main-div {
+        height: auto; /* Allow height to be auto for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Even smaller font size */
+    }
+    .input-section{
+        display: grid;
+        justify-content: center;
+        gap: 15px;
+    }
+    #symptom, #select2 {
+        width: 100%; /* Full width for inputs */
+    }
+
+    button {
+        background-color: #22c55e;
+        width: 100%; /* Make button full width */
+    }
+    
+    .medicine-item h3 {
+        font-size: 1.1em; /* Adjust font size for medicine item */
+    }
+
+    footer { 
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+    .giticon{
+        display: none;
+    }
+}
+

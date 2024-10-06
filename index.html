@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Suggester</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-div">
+
+        <header>
+            <h1><span class="highlight">Healthify</span> Medicine Suggester <i class="ri-hospital-line"></i></h1>
+            <p>Find the right medicine for your symptoms quickly and easily.</p>
+        </header>
+        
+        <section class="input-section">
+            <label for="symptom">What's troubling you?</label>
+            <select id="symptom">
+                <option value="headache">Headache</option>
+                <option value="fever">Fever</option>
+                <option value="cough">Cough</option>
+                <option value="cold">Cold</option>
+                <option value="stomach-pain">Stomach Pain</option>
+                <option value="allergy">Allergy</option>
+                <option value="diarrhea">Diarrhea</option>
+                <option value="heartburn">Heartburn</option>
+                <option value="nausea">Nausea</option>
+                <option value="fatigue">Fatigue</option>
+                <option value="muscle-pain">Muscle Pain</option>
+                <option value="insomnia">Insomnia</option>
+                <option value="sore-throat">Sore Throat</option>
+                <option value="anxiety">Anxiety</option>
+                <option value="constipation">Constipation</option>
+                <option value="skin-rash">Skin Rash</option>
+                
+            </select>
+            <select id="select2">
+                <option value="">Infants</option>
+                <option value="">Teenagers</option>
+                <option value="">Adults</option>
+                <option value="">60+ years</option>
+            </select>
+            <button id="suggest-btn">Get Suggestion</button>
+        </section>
+
+        <section class="output-section">
+            <h2>Suggested Medicines</h2>
+            <div id="medicine-list">
+            
+            </div>
+       
+        </section>
+         
+    </div>
+ 
+
+    <footer>
+        <p>&copy;  Made with ❤️ by SANKET AGRAWAL <i class="giticon ri-github-line ml-10" ></i></p>
+        <button id="feedback">Give Feedback</button>
+    </footer>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
